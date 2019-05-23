@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculadora</title>
+        <style>
+            .tabla {
+                border: 1px solid black;
+            }
+            .tabla td {
+                border: 1px solid black;
+            }
+            .tabla input{
+                width: 50px;
+            }
+            #cero {
+                width: 100%;
+            }
+            #casillero{
+                width: 98%;
+            }
+        </style>
+        <script type="text/javascript" src="../javascript/calculadora.js"></script>
+    </head>
+    <body>
+        <table class="tabla">
+            <tr>
+                <td colspan="4"><input id="casillero" type="text" id="valor"></td>
+            </tr>
+            <tr>
+                <td><input type="button" id="CE" value="CE" onclick="ce()"></td>
+                <td><input type="button" id="C" value="C" onclick="c()"></td>
+                <td><input type="button" id="BS" value="BS" onclick="bs()"></td>
+                <td><input type="button" id="dividir" value="/" onclick="dato('/')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" id="siete" value="7" onclick="dato('7')"></td>
+                <td><input type="button" id="ocho" value="8" onclick="dato('8')"></td>
+                <td><input type="button" id="nueve" value="9" onclick="dato('9')"></td>
+                <td><input type="button" id="multiplicar" value="*" onclick="dato('*')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" id="cuatro" value="4" onclick="dato('4')"></td>
+                <td><input type="button" id="cinco" value="5" onclick="dato('5')"></td>
+                <td><input type="button" id="seis" value="6" onclick="dato('6')"></td>
+                <td><input type="button" id="restar" value="-" onclick="dato('-')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" id="uno" value="1" onclick="dato('1')"></td>
+                <td><input type="button" id="dos" value="2" onclick="dato('2')"></td>
+                <td><input type="button" id="tres" value="3" onclick="dato('3')"></td>
+                <td><input type="button" id="sumar" value="+" onclick="dato('+')"></td>
+            </tr>
+            <tr>
+                <td colspan="3"><input type="button" id="cero" value="0" onclick="dato('0')"></td>
+                <td><input type="button" id="calcular" value="=" onclick="operar()"></td>
+            </tr>
+        </table>
+    </body>
+    <footer>
+
+    </footer>
+</html>

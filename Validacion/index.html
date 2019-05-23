@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Validaciones</title>
+	<script type="text/javascript" src="validar.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<section>
+        <table>
+            <form onsubmit="validar()">
+                <tr>
+                    <td><label>Cedula</label></td>
+                    <td><input type="text" id="cedula" placeholder="Ingresar Cedula" onfocus="escribe(this)" onkeyup="this.value = val_numero(this.value)"></td>
+                </tr>
+                <tr>
+                    <td><label>Nombre</label></td>
+                    <td><input type="text" id="nombre" placeholder="Ingresar Nombre" onfocus="escribe(this)" onkeyup="this.value = val_letra(this.value)" onchange="this.value = dos_valores(this.value)"></td>
+                </tr>
+                <tr>
+                    <td><label>Apellido</label></td>
+                    <td><input type="text" id="apellido" placeholder="Ingresar Apellido" onfocus="escribe(this)" onkeyup="this.value = val_letra(this.value)" onchange="this.value = dos_valores(this.value)"></td>
+                </tr>
+                <tr>
+                    <td><label>Dirección</label></td>
+                    <td><input type="text" name="direccion" placeholder="Dirección" onfocus="escribe(this)"></td>
+                </tr>
+                <tr>
+                    <td><label>Teléfono</label></td>
+                    <td><input type="text" name="telefono" placeholder="Celular" onfocus="escribe(this)" onkeyup="this.value = val_numero(this.value)"></td>
+                </tr>
+                <tr>
+                    <td><label>Fecha de Nacimiento</label></td>
+                    <td><input type="text" id="fecha" name="fecha" placeholder="DD/MM/YYYY" onfocus="escribe(this)"></td>
+                    <td><spam id="f" style="display: none;">*error</spam></td>
+                </tr>
+                <tr>
+                    <td><label>Correo</label></td>
+                    <td><input type="text" id="correo" name="correo" placeholder="Correo" onfocus="escribe(this)"></td>
+                    <td><spam id="e" style="display: none;">*error</spam></td>
+                </tr>
+                <tr>
+                    <td colspan="2"> <input type="submit" id="aceptar" name="aceptar" value="aceptar"></td>
+                </tr>
+            </form>
+        </table>
+        <spam id="p" style="display: none;">Error, campos incompletos!</spam>
+    </section>
+</body>
+</html>
